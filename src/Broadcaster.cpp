@@ -411,7 +411,7 @@ void Broadcaster::CreateSendTransport(bool enableAudio, bool useSimulcast)
 	auto sendTransportId = response["id"].get<std::string>();
 
 	this->sendTransport = this->device.CreateSendTransport(
-	  this,
+	  (mediasoupclient::SendTransport::Listener*)this,
 	  sendTransportId,
 	  response["iceParameters"],
 	  response["iceCandidates"],
@@ -556,7 +556,7 @@ void Broadcaster::CreateRecvTransport()
 	auto sctpParameters = response["sctpParameters"];
 
 	this->recvTransport = this->device.CreateRecvTransport(
-	  this,
+	  (mediasoupclient::RecvTransport::Listener*)this,
 	  recvTransportId,
 	  response["iceParameters"],
 	  response["iceCandidates"],
