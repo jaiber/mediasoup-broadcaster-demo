@@ -52,7 +52,7 @@ include(FetchContent)
 message(STATUS "\nFetching mediasoupclient...\n")
 FetchContent_Declare(
   mediasoupclient
-  GIT_REPOSITORY https://github.com/jjjohn/libmediasoupclient.git
+  GIT_REPOSITORY https://github.com/jaiber/libmediasoupclient.git
   GIT_TAG v3
 )
 FetchContent_MakeAvailable(mediasoupclient)
