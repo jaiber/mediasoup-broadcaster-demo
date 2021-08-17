@@ -579,6 +579,7 @@ void Broadcaster::OnMessage(mediasoupclient::DataConsumer* dataConsumer, const w
 void Broadcaster::Stop()
 {
 	std::cout << "[INFO] Broadcaster::Stop()" << std::endl;
+	return;
 
 	this->timerKiller.Kill();
 
